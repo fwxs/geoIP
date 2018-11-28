@@ -79,7 +79,7 @@ def decompress(file):
     :param file: Filename.
     :return: Decompressed filename.
     """
-    mmdbName = re.compile("GeoLite2-(ASN|City|Country)\.mmdb$")
+    mmdbName = re.compile(r"GeoLite2-(ASN|City|Country).mmdb$")
 
     with tarfile.open(file, mode="r:gz") as gzFile:
         for member in gzFile.getmembers():
